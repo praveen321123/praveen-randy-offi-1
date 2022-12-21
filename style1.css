@@ -1,0 +1,105 @@
+::-webkit-scrollbar-track{
+    background: #333;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, rgb(9, 129, 177)30%);
+    border-radius: 10px;
+    
+}
+::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(transparent,rgb(140, 255, 0)20%);   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 200vh
+}
+
+section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+}
+
+section .sec{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+section .sec.sec1{
+    background: #b0ff54;
+    clip-path: circle(300px at 0 0);
+}
+
+section .sec.sec2{
+    background: #03a9f4;
+    clip-path: circle(200px at 100% 100%);
+}
+
+section h2{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 10em;
+}
+
+section .sec.sec1 h2{
+    color: transparent;
+    -webkit-text-stroke: 5px #333;
+}
+
+section .sec.sec2 h2{
+    color: #333;
+    -webkit-text-stroke: 5px #fff;
+}
+
+a h2{
+    margin-top: 100px;
+    font-size: 50px;
+    z-index: 10;  
+}
+
+
+a h2{
+    animation-name: color_change;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes color_change{
+
+    0%{
+        color: red;
+    }
+    25%{
+        color: yellowgreen;
+    }
+    50%{
+        color: goldenrod;
+    }
+    75%{
+        color: palevioletred;
+    }
+    100%{
+        color: blue;
+    }
+}

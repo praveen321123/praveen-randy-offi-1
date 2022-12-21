@@ -1,0 +1,427 @@
+/* Globle styles */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    background-image: url(./assets/globle\ background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Navbar styles */
+
+
+nav{
+
+    margin-top: 40px;
+    display: flex;
+    justify-content: end;
+   
+
+}
+
+.navigation{
+    position: relative;
+    left: 12px;
+    width: 500px;
+    height: 120px;
+    padding: 0;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
+    10px 10px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px  rgba(0,0,0,0.5), 
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px  rgba(0,0,0,0.75);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    margin: 0 5px;
+}
+
+.navigation li::before{
+    content: '';
+    position: absolute;
+    top: 35px;
+    left:50%; 
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background: #181b1f;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.navigation li.active::before{
+    background:greenyellow;
+    box-shadow: 0 0 5px greenyellow,
+    0 0 10px greenyellow,
+    0 0 20px greenyellow,
+    0 0 30px greenyellow,
+    0 0 40px greenyellow,
+    0 0 50px greenyellow;
+}
+
+.navigation li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.navigation li a .icon{
+    position: absolute;
+    font-size: 1.75em;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    border-radius: 50%;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+
+}
+
+.navigation li.active a .icon{
+   background-color:greenyellow;
+   color: aliceblue;
+   transform: translateY(-55px);
+   box-shadow: 5px 5px 7px rgba(0,0,0,0.25),
+   inset 2px 2px 3px rgba(255,255,255,0.25),
+   inset -3px -3px 5px rgba(0,0,0,0.5);
+   transition-delay: 0s;
+}
+
+.navigation li a .icon::before{
+    content: '';
+    position: absolute;
+    inset: 10px;
+    background: #2f363e;
+    border-radius: 50%;
+
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5),
+    inset 2px 2px 3px rgba(255,255,255,0.25),
+    inset -3px -3px 5px rgba(0,0,0,0.5);
+    transform: scale(0);
+    transition: 0.5s;
+
+}
+
+.navigation li.active a .icon::before{
+    transform: scale(1);
+} 
+
+.navigation li a .text{
+    position: absolute;
+    font-size: 0.75em;
+    color: #2f363e;
+    opacity: 0;
+    border-radius: 15px;
+    transform: translateY(20px);
+    padding: 2px 10px;
+    background: #fff;
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.25),
+    inset -3px -3px 5px rgba(0,0,0,0.5);
+    transition: 0.5s;
+    transition-delay: 0s;
+
+
+}
+
+.navigation li.active a .text{
+    opacity: 1;
+    transform: translateY(10px);
+    transition-delay: 0.2s;
+}
+/*------------------- Navbar ends ------------------------*/
+
+
+
+/* LOGO Styles */
+
+.Bulb-Logo{
+    margin-top: 25px;
+}
+div .Logo-text{
+
+    font-family: 'Great Vibes', cursive;
+    position: relative;
+    top: 40px;
+    right: 35px;
+    color: #fff; 
+}
+/* --------------------- LOGO Styles ends------------------------- */
+
+/* content styles*/
+.Web-size{
+    font-size: 50px;
+    padding-right: 220px;
+}
+.Web-para{
+    color: #fff;
+    padding-left: 50px;
+}
+/*----------------------- content styles ends---------------------------- */
+
+/* img styles */
+
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: rgba(220, 181, 181, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 80px;
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    inset: -10px 60px;
+    background: linear-gradient(315deg,#0493b7,#ff04ff);
+    transition: 0.5s;
+    animation: animate 4s linear infinite ;
+}
+.box:hover::before{
+
+ inset: -10px 0px;
+}
+
+
+.box::after{
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: linear-gradient(315deg,#00ccff,#d400d4);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.content_img{
+    position: absolute;
+    inset: 15px;
+    border:3px solid #070a1c;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.content_img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.box:hover .content_img img{
+    opacity: 0;
+}
+
+.content_img h5{
+    position: relative;
+    font-size: 1.0em;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.content_img h5 span{
+    font-weight: 300;
+    font-size: 0.75em;
+}
+
+.content_img a{
+    position: relative;
+    margin-top: 2px;
+    padding: 5px 8px;
+    background: #fff;
+    color: black;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.content_img a:hover{
+    letter-spacing: 0.2em;
+}
+
+.container-fluid .Welcomeback h4{
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+/* ---------------- img styles ends --------------------- */
+
+
+/* cards styles */
+.cards{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+  
+}
+.cards .drop{
+    position: relative;
+    width: 185px;
+    height: 185px;
+    background-color:rgba(0, 238, 255, 0.72);
+    box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
+    25px 35px 20px rgba(0,0,0,0.05),
+    25px 30px 30px rgba(0,0,0,0.05),
+    inset -20px -20px 25px rgba(4, 4, 4, 0.526);
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards .drop:nth-child(1){
+    border-radius: 29% 71% 42% 58% / 62% 62% 38% 38% ;
+}
+
+.cards .drop:nth-child(2){
+    border-radius: 29% 71% 42% 58% / 62% 62% 38% 38% ;
+}
+
+.cards .drop:nth-child(3){
+    border-radius: 29% 71% 42% 58% / 62% 62% 38% 38% ;
+}
+
+.cards .drop:hover{
+    border-radius: 50% ;
+}
+
+.cards .drop::before{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    width: 20px;
+    height: 20px;
+    background:rgba(255, 255, 255, 0.629);
+    border-radius: 50%;
+    opacity: 0.9;
+}
+.cards .drop::after{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    background:rgba(249, 246, 246, 0.655);
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+.cards .drop .card_info{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+.cards .drop .card_info h6{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.817);
+    border-radius: 50%;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.1),
+    inset -2px -5px 10px rgb(125, 121, 121),
+    5px 5px 6px rgba(80, 73, 73, 0.757),
+    5px 5px 7px rgba(123, 114, 114, 0.584);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: var(--clr);
+
+}
+
+.cards .drop .card_info a{
+    position: relative;
+    padding: 5px 10px;
+    background: var(--clr);
+    text-decoration: none;
+    color:#fff;
+    border-radius: 25px;
+    font-weight: 500;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.25);
+    opacity: 0.75;
+    transition: 0.5s;
+}
+
+.cards .drop .card_info a:hover{
+    opacity: 1;
+}
+
+.cards .drop .card_info a::before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    height: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+
+}
+
+.cards .drop .card_info a ion-icon{
+    position: relative;
+    top: 2px;
+    padding-right: 3px;
+    
+}
+/* ----------------cards styles ends----------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

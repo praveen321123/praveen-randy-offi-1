@@ -1,0 +1,45 @@
+/* color change */
+
+.Web-size{
+    animation-name: color_change;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.Welcomeback h4{
+    animation-name: color_change;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color_change{
+
+    0%{
+        color: red;
+    }
+    25%{
+        color: yellowgreen;
+    }
+    50%{
+        color: goldenrod;
+    }
+    75%{
+        color: palevioletred;
+    }
+    100%{
+        color: blue;
+    }
+}
+/* ------------------------------- */
+
+/* img bg */
+@keyframes animate
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
